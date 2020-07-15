@@ -12,6 +12,7 @@ public class LogOutTest extends BaseTest{
 	@Test(enabled = true)
 	public void logout() throws InterruptedException
 	{
+		
 		HamburgerMenuPage hamburgermenu = new HamburgerMenuPage(driver1);
 		SettingsPage settingspage = new SettingsPage(driver1);
 		

@@ -29,6 +29,7 @@
   </build>
   
   <dependencies>
+ 
  <dependency>
 			<groupId>io.appium</groupId>
 			<artifactId>java-client</artifactId>
@@ -40,6 +41,28 @@
 			<artifactId>testng</artifactId>
 			<version>6.14.3</version>
 			<scope>test</scope>
-		</dependency>				 
+		</dependency>
+		
+		<!-- Take Data From ExcelSheet -->
+		<dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.9</version>
+        </dependency>
+        
+        <!-- Take Generate ExtentReport -->
+        <dependency>
+            <groupId>com.relevantcodes</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>2.41.2</version>
+        </dependency>
+        
+        <!-- Take Screenshot -->
+        <dependency>
+    		<groupId>commons-io</groupId>
+   		    <artifactId>commons-io</artifactId>
+    		<version>2.6</version>
+		</dependency>
+             				 
   </dependencies>
 </project>

@@ -23,14 +23,16 @@ public class HamburgerMenuPage extends BasePage{
 	@FindBy(xpath="/html/body/div[1]/div[2]/div[2]/div[2]/nav/ul/li[1]/a")
 	private WebElement homeButtonFromSidemenu;
 	
-	@FindBy(xpath="/html/body/div[1]/div[2]/div[2]/div[2]/nav/ul/li[8]/a")
+	//@FindBy(xpath="//*[@id='alt-navigation']/li[8]/a")
+	@FindBy(linkText="SETTINGS")
 	private WebElement settingsButtonFromSidemenu;
 	
+	@FindBy(xpath="//*[@id='alt-loader']/div/div")
+	private WebElement loader;
 	
-	public void clickOnSigninButton() throws InterruptedException
+	public void clickOnSigninButton()
 	{
-		Thread.sleep(2500);
-		waitTillElementIsClickable(signInButton);
+		loaderHandling(loader,signInButton);
 		signInButton.click();
 	}
 	

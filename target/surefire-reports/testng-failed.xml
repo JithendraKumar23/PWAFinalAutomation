@@ -9,12 +9,6 @@
           <include name="initApplication"/>
         </methods>
       </class> <!-- com.mobiotics.Test.LogOutTest -->
-      <class name="com.mobiotics.Test.SignUpTest">
-        <methods>
-          <include name="lookuppage_login"/>
-          <include name="initApplication"/>
-        </methods>
-      </class> <!-- com.mobiotics.Test.SignUpTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->

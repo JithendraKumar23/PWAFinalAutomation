@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jan 29 19:23:59 IST 2020</td>
+<td>Started on:</td><td>Wed Jul 15 17:48:10 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>105 seconds (105066 ms)</td>
+<tr><td>Total time:</td><td>5 seconds (5427 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,12 +75,12 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.mobiotics.Test.LogOutTest.logout()'><b>logout</b><br>Test class: com.mobiotics.Test.LogOutTest</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: Returned value cannot be converted to WebElement: {message=no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/div[1]/div[2]/div[2]/div[2]/nav/ul/li[8]/a&quot;}
-  (Session info: chrome=79.0.3945.136)
+<td title='com.mobiotics.Test.LoginTest.login()'><b>login</b><br>Test class: com.mobiotics.Test.LoginTest</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Returned value cannot be converted to WebElement: {message=no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;alt-loader&apos;]/div/div&quot;}
+  (Session info: chrome=80.0.3987.119)
   (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.18362 x86_64)}
 Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
-System info: host: &apos;DESKTOP-79QFOE9&apos;, ip: &apos;192.168.1.50&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;
+System info: host: &apos;DESKTOP-79QFOE9&apos;, ip: &apos;192.168.225.79&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;
 Driver info: driver.version: AndroidDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:324)
 	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
@@ -97,26 +97,124 @@ Driver info: driver.version: AndroidDriver
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy8.isDisplayed(Unknown Source)
+	at com.sun.proxy.$Proxy13.isDisplayed(Unknown Source)
 	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:315)
 	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:44)
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:301)
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:298)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:686)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:682)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
-	at com.mobiotics.Page.BasePage.waitTillElementIsClickable(BasePage.java:35)
-	at com.mobiotics.Page.HamburgerMenuPage.clickOnSettingsButton(HamburgerMenuPage.java:51)
+	at com.mobiotics.Page.BasePage.isElementDisplayed(BasePage.java:47)
+	at com.mobiotics.Page.BasePage.loaderHandling(BasePage.java:56)
+	at com.mobiotics.Page.HomePage.clickOnHambergermenu(HomePage.java:24)
+	at com.mobiotics.Test.LoginTest.login(LoginTest.java:23)
+Caused by: java.lang.ClassCastException: com.google.common.collect.Maps$TransformedEntriesMap cannot be cast to org.openqa.selenium.WebElement
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	... 49 more
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2129844134", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2129844134'><pre>org.openqa.selenium.WebDriverException: Returned value cannot be converted to WebElement: {message=no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;alt-loader&apos;]/div/div&quot;}
+  (Session info: chrome=80.0.3987.119)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.18362 x86_64)}
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;DESKTOP-79QFOE9&apos;, ip: &apos;192.168.225.79&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;
+Driver info: driver.version: AndroidDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:324)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:419)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:152)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:301)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:298)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
+	at com.mobiotics.Page.BasePage.isElementDisplayed(BasePage.java:47)
+	at com.mobiotics.Page.BasePage.loaderHandling(BasePage.java:56)
+	at com.mobiotics.Page.HomePage.clickOnHambergermenu(HomePage.java:24)
+	at com.mobiotics.Test.LoginTest.login(LoginTest.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.ClassCastException: com.google.common.collect.Maps$TransformedEntriesMap cannot be cast to org.openqa.selenium.WebElement
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	... 49 more
+</pre></div></td>
+<td>0</td>
+<td>com.mobiotics.Test.LoginTest@35d176f7</td></tr>
+<tr>
+<td title='com.mobiotics.Test.LogOutTest.logout()'><b>logout</b><br>Test class: com.mobiotics.Test.LogOutTest</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Returned value cannot be converted to WebElement: {message=no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;alt-loader&apos;]/div/div&quot;}
+  (Session info: chrome=80.0.3987.119)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.18362 x86_64)}
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;DESKTOP-79QFOE9&apos;, ip: &apos;192.168.225.79&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;
+Driver info: driver.version: AndroidDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:324)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:419)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:152)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:301)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:298)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
+	at com.mobiotics.Page.BasePage.isElementDisplayed(BasePage.java:47)
+	at com.mobiotics.Page.BasePage.loaderHandling(BasePage.java:56)
+	at com.mobiotics.Page.SettingsPage.clickOnHambergermenu(SettingsPage.java:36)
 	at com.mobiotics.Test.LogOutTest.logout(LogOutTest.java:19)
 Caused by: java.lang.ClassCastException: com.google.common.collect.Maps$TransformedEntriesMap cannot be cast to org.openqa.selenium.WebElement
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
-	... 50 more
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace589987187", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace589987187'><pre>org.openqa.selenium.WebDriverException: Returned value cannot be converted to WebElement: {message=no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/div[1]/div[2]/div[2]/div[2]/nav/ul/li[8]/a&quot;}
-  (Session info: chrome=79.0.3945.136)
+	... 49 more
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1598898814", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1598898814'><pre>org.openqa.selenium.WebDriverException: Returned value cannot be converted to WebElement: {message=no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;alt-loader&apos;]/div/div&quot;}
+  (Session info: chrome=80.0.3987.119)
   (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.18362 x86_64)}
 Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
-System info: host: &apos;DESKTOP-79QFOE9&apos;, ip: &apos;192.168.1.50&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;
+System info: host: &apos;DESKTOP-79QFOE9&apos;, ip: &apos;192.168.225.79&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;
 Driver info: driver.version: AndroidDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:324)
 	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
@@ -133,16 +231,15 @@ Driver info: driver.version: AndroidDriver
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy8.isDisplayed(Unknown Source)
+	at com.sun.proxy.$Proxy13.isDisplayed(Unknown Source)
 	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:315)
 	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:44)
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:301)
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:298)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:686)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:682)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
-	at com.mobiotics.Page.BasePage.waitTillElementIsClickable(BasePage.java:35)
-	at com.mobiotics.Page.HamburgerMenuPage.clickOnSettingsButton(HamburgerMenuPage.java:51)
+	at com.mobiotics.Page.BasePage.isElementDisplayed(BasePage.java:47)
+	at com.mobiotics.Page.BasePage.loaderHandling(BasePage.java:56)
+	at com.mobiotics.Page.SettingsPage.clickOnHambergermenu(SettingsPage.java:36)
 	at com.mobiotics.Test.LogOutTest.logout(LogOutTest.java:19)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
@@ -171,17 +268,17 @@ Driver info: driver.version: AndroidDriver
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 Caused by: java.lang.ClassCastException: com.google.common.collect.Maps$TransformedEntriesMap cannot be cast to org.openqa.selenium.WebElement
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
-	... 50 more
+	... 49 more
 </pre></div></td>
-<td>3</td>
-<td>com.mobiotics.Test.LogOutTest@57536d79</td></tr>
+<td>0</td>
+<td>com.mobiotics.Test.LogOutTest@551aa95a</td></tr>
 <tr>
 <td title='com.mobiotics.Test.SignUpTest.lookuppage_signUp()'><b>lookuppage_signUp</b><br>Test class: com.mobiotics.Test.SignUpTest</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: Returned value cannot be converted to WebElement: {message=no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;hamburger-signin-button&apos;]&quot;}
-  (Session info: chrome=79.0.3945.136)
+<td><div><pre>org.openqa.selenium.WebDriverException: Returned value cannot be converted to WebElement: {message=no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;alt-loader&apos;]/div/div&quot;}
+  (Session info: chrome=80.0.3987.119)
   (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.18362 x86_64)}
 Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
-System info: host: &apos;DESKTOP-79QFOE9&apos;, ip: &apos;192.168.1.50&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;
+System info: host: &apos;DESKTOP-79QFOE9&apos;, ip: &apos;192.168.225.79&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;
 Driver info: driver.version: AndroidDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:324)
 	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
@@ -198,26 +295,25 @@ Driver info: driver.version: AndroidDriver
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy8.isDisplayed(Unknown Source)
+	at com.sun.proxy.$Proxy13.isDisplayed(Unknown Source)
 	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:315)
 	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:44)
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:301)
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:298)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:686)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:682)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
-	at com.mobiotics.Page.BasePage.waitTillElementIsClickable(BasePage.java:35)
-	at com.mobiotics.Page.HamburgerMenuPage.clickOnSigninButton(HamburgerMenuPage.java:32)
-	at com.mobiotics.Test.SignUpTest.lookuppage_signUp(SignUpTest.java:33)
+	at com.mobiotics.Page.BasePage.isElementDisplayed(BasePage.java:47)
+	at com.mobiotics.Page.BasePage.loaderHandling(BasePage.java:56)
+	at com.mobiotics.Page.HomePage.clickOnHambergermenu(HomePage.java:24)
+	at com.mobiotics.Test.SignUpTest.lookuppage_signUp(SignUpTest.java:32)
 Caused by: java.lang.ClassCastException: com.google.common.collect.Maps$TransformedEntriesMap cannot be cast to org.openqa.selenium.WebElement
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
-	... 50 more
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace43650267", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace43650267'><pre>org.openqa.selenium.WebDriverException: Returned value cannot be converted to WebElement: {message=no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;hamburger-signin-button&apos;]&quot;}
-  (Session info: chrome=79.0.3945.136)
+	... 49 more
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1068445309", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1068445309'><pre>org.openqa.selenium.WebDriverException: Returned value cannot be converted to WebElement: {message=no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;alt-loader&apos;]/div/div&quot;}
+  (Session info: chrome=80.0.3987.119)
   (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.18362 x86_64)}
 Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
-System info: host: &apos;DESKTOP-79QFOE9&apos;, ip: &apos;192.168.1.50&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;
+System info: host: &apos;DESKTOP-79QFOE9&apos;, ip: &apos;192.168.225.79&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;
 Driver info: driver.version: AndroidDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:324)
 	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
@@ -234,17 +330,16 @@ Driver info: driver.version: AndroidDriver
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy8.isDisplayed(Unknown Source)
+	at com.sun.proxy.$Proxy13.isDisplayed(Unknown Source)
 	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:315)
 	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:44)
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:301)
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:298)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:686)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:682)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
-	at com.mobiotics.Page.BasePage.waitTillElementIsClickable(BasePage.java:35)
-	at com.mobiotics.Page.HamburgerMenuPage.clickOnSigninButton(HamburgerMenuPage.java:32)
-	at com.mobiotics.Test.SignUpTest.lookuppage_signUp(SignUpTest.java:33)
+	at com.mobiotics.Page.BasePage.isElementDisplayed(BasePage.java:47)
+	at com.mobiotics.Page.BasePage.loaderHandling(BasePage.java:56)
+	at com.mobiotics.Page.HomePage.clickOnHambergermenu(HomePage.java:24)
+	at com.mobiotics.Test.SignUpTest.lookuppage_signUp(SignUpTest.java:32)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -272,10 +367,10 @@ Driver info: driver.version: AndroidDriver
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 Caused by: java.lang.ClassCastException: com.google.common.collect.Maps$TransformedEntriesMap cannot be cast to org.openqa.selenium.WebElement
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
-	... 50 more
+	... 49 more
 </pre></div></td>
-<td>1</td>
-<td>com.mobiotics.Test.SignUpTest@6ddf90b0</td></tr>
+<td>0</td>
+<td>com.mobiotics.Test.SignUpTest@578486a3</td></tr>
 </table><p>
 </body>
 </html>

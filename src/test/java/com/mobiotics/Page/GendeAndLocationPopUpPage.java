@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
+
 
 import com.mobiotics.Constant.BaseTest;
 
@@ -22,25 +22,32 @@ public class GendeAndLocationPopUpPage extends BasePage{
 	@FindBy(xpath="//*[@id='dropBtn']")
 	private WebElement clickOnDropDownLocation;
 	
-	@FindBy(xpath="/html/body/div[1]/div[2]/div[2]/div[3]/div/div/button")
+	@FindBy(xpath="//*[@id='searchInput']")
+	private WebElement clickOnSearchbuttonOnList;
+	
+	@FindBy(xpath="//*[@id='dropdown_content']/ul/li")
+	private WebElement SelectLocationFromSearchedList;
+	
+	@FindBy(xpath="//*[@id='ch-state-slct']/div/div/button")
 	private WebElement clickOnConfirmButton;
+	
+	@FindBy(xpath="//*[@id='alt-loader']/div/div")
+	private WebElement loader;
 	
 	public void FillGenAndLocationPoppu() throws InterruptedException
 	{
-		Thread.sleep(2500);
-		//waitTillElementIsClickable(selectFemaleOption);
+		Thread.sleep(2000);
+		loaderHandling(loader,selectFemaleOption);
 		selectFemaleOption.click();
+
+		waitTillTheElementVisible(clickOnDropDownLocation);
+		clickOnDropDownLocation.click();
+		clickOnSearchbuttonOnList.click();
+		clickOnSearchbuttonOnList.sendKeys("Kerala");
+		SelectLocationFromSearchedList.click();
 		
-		Thread.sleep(3500);
-		//waitTillTheElementVisible(clickOnDropDownLocation);
-		Select select=new Select(clickOnDropDownLocation);
-		select.selectByVisibleText("Kerala");
-		
-		Thread.sleep(3500);
-		//waitTillTheElementVisible(clickOnConfirmButton);
-		clickOnConfirmButton.click();
-		
+		//Thread.sleep(3500);
+		waitTillTheElementVisible(clickOnConfirmButton);
+		clickOnConfirmButton.click();	
 	}
-
-
 }

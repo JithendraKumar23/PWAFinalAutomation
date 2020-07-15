@@ -4,6 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import com.mobiotics.Constant.BaseTest;
 
 
@@ -25,11 +28,12 @@ public class EnterDetailPage extends BasePage{
 	@FindBy(xpath="//*[@id='new-journey-email-signup-button']")
 	private WebElement clickContinueButtonForSignUp;
 	
+	@FindBy(xpath="//*[@id='alt-loader']/div/div")
+	private WebElement loader;
 	
 	public void setNewPassword(String password) throws InterruptedException
 	{
-		Thread.sleep(2500);
-		waitTillTheElementVisible(enterPassword);
+		loaderHandling(loader,enterPassword);
 		enterPassword.sendKeys(password);
 	}
 	
@@ -37,9 +41,7 @@ public class EnterDetailPage extends BasePage{
 	{
 		waitTillElementIsClickable(clickAgerangeDropDown);
 		clickAgerangeDropDown.click();
-		
 		selectAgefromdropdown.click();
-		
 		clickContinueButtonForSignUp.click();
 	}
 

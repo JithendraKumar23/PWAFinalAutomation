@@ -16,40 +16,45 @@ public class SettingsPage extends BasePage {
 		PageFactory.initElements(BaseTest.driver1, this);
 	}
 	
-	@FindBy(xpath="/html/body/div[1]/div[2]/div[2]/div[1]/div[1]/nav/a[2]")
+	@FindBy(xpath="//a[@class='nav-menu' and text()='Account']")
 	private WebElement clickOnAccountPagemenu;
 	
-	@FindBy(xpath="/html/body/div[1]/div[2]/div[2]/div[1]/div[1]/div/div/div[2]/input")
+	@FindBy(xpath="//*[@class='btn grad-btn logout-setting']")
 	private WebElement clickOnLogOutButton;
 	
-	@FindBy(xpath="/html/body/div[1]/div[2]/div[2]/div[1]/div[2]/div/div[1]/div/div[2]/button")
+	@FindBy(xpath="//button[@class='btn grad-btn btn-lg' and text()='YES']")
 	private WebElement clickOnYESButtonInLogOutPopup;
 	
 	@FindBy(xpath="//*[@id='showMenu']")
 	private WebElement hambergurMenu;
 	
-	public void clickOnHambergermenu() throws InterruptedException
+	@FindBy(xpath="//*[@id='alt-loader']/div/div")
+	private WebElement loader;
+	
+	public void clickOnHambergermenu()
 	{
-		Thread.sleep(2500);
-		waitTillTheElementVisible(hambergurMenu);
+		loaderHandling(loader, hambergurMenu);
 		hambergurMenu.click();
 	}
 	
-	public void accountPage()
+	public void accountPage() throws InterruptedException
 	{
-		waitTillElementIsClickable(clickOnAccountPagemenu);
+		Thread.sleep(2500);
 		clickOnAccountPagemenu.click();
 	}
 	
-	public void logOutButton()
+	public void logOutButton() throws InterruptedException
 	{
+		Thread.sleep(1500);
+		loaderHandling(loader,clickOnLogOutButton);
 		JavascriptExecutor js=(JavascriptExecutor)driver1;
 		js.executeScript("window.scrollBy(0,3000)");
-		waitTillElementIsClickable(clickOnLogOutButton);
+		//waitTillElementIsClickable(clickOnLogOutButton);
 		clickOnLogOutButton.click();
 		
 		clickOnYESButtonInLogOutPopup.click();
 		
+		loaderHandling(loader,hambergurMenu);
 		try
 		{
 			if(hambergurMenu.isDisplayed())

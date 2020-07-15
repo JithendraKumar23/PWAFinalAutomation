@@ -3,15 +3,33 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="com.mobiotics.Test.LoginTest">
+        <methods>
+          <include name="Extent"/>
+          <include name="TakeScreenshot"/>
+          <include name="GenerareReport"/>
+          <include name="login"/>
+          <include name="CloseFramework"/>
+          <include name="initApplication"/>
+        </methods>
+      </class> <!-- com.mobiotics.Test.LoginTest -->
       <class name="com.mobiotics.Test.SignUpTest">
         <methods>
+          <include name="Extent"/>
+          <include name="TakeScreenshot"/>
+          <include name="GenerareReport"/>
           <include name="lookuppage_signUp"/>
+          <include name="CloseFramework"/>
           <include name="initApplication"/>
         </methods>
       </class> <!-- com.mobiotics.Test.SignUpTest -->
       <class name="com.mobiotics.Test.LogOutTest">
         <methods>
+          <include name="Extent"/>
+          <include name="TakeScreenshot"/>
           <include name="logout"/>
+          <include name="GenerareReport"/>
+          <include name="CloseFramework"/>
           <include name="initApplication"/>
         </methods>
       </class> <!-- com.mobiotics.Test.LogOutTest -->

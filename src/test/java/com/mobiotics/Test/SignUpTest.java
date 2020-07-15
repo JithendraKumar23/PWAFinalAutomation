@@ -1,5 +1,7 @@
 package com.mobiotics.Test;
 
+import java.awt.AWTException;
+
 import org.testng.annotations.Test;
 
 import com.mobiotics.Constant.BaseTest;
@@ -9,13 +11,11 @@ import com.mobiotics.Page.HamburgerMenuPage;
 import com.mobiotics.Page.HomePage;
 import com.mobiotics.Page.LookupPage;
 import com.mobiotics.Page.PayPage;
-import com.mobiotics.Page.PlayerPage;
 import com.mobiotics.Page.SelectPackPage;
-import com.mobiotics.Page.ShowDetailPage;
 
 public class SignUpTest extends BaseTest{
 	@Test(enabled = true)
-	public void lookuppage_signUp() throws InterruptedException
+	public void lookuppage_signUp() throws InterruptedException, AWTException
 	{
 		HomePage homepage = new HomePage(driver1);
 		HamburgerMenuPage hamburgermenu = new HamburgerMenuPage(driver1);
@@ -24,21 +24,21 @@ public class SignUpTest extends BaseTest{
 		EnterDetailPage enterdetailpage = new EnterDetailPage(driver1);
 		PayPage paypage = new PayPage(driver1);
 		GendeAndLocationPopUpPage genandloc = new GendeAndLocationPopUpPage(driver1);
+		
 		//ShowDetailPage showdetailpage = new ShowDetailPage(driver1);
 		//PlayerPage playerpage = new PlayerPage(driver1);
 		
-		
-	//homepage.blockNotification();
-	homepage.clickOnHambergermenu();
-	hamburgermenu.clickOnSigninButton();
-	lookuppage.setUserName(UN);
-	lookuppage.clickToProceed();
-	selectpackpage.clickOnSelectPack();
-	enterdetailpage.setNewPassword(PW);
-	enterdetailpage.selectAgeRange();
-	paypage.clickBackFromPayPage();
-	selectpackpage.clickBackFromSelectpackPage();
-	genandloc.FillGenAndLocationPoppu();
+		//homepage.blockNotification();
+		homepage.clickOnHambergermenu();
+		hamburgermenu.clickOnSigninButton();
+		lookuppage.setUserName(UN);
+		lookuppage.clickToProceed();
+		selectpackpage.clickOnSelectPack();
+		enterdetailpage.setNewPassword(PW);
+		enterdetailpage.selectAgeRange();
+		paypage.clickBackFromPayPage();
+		selectpackpage.clickBackFromSelectpackPage();
+		genandloc.FillGenAndLocationPoppu();
 	
 	}
 	

@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.mobiotics.Constant.BaseTest;
 
@@ -17,10 +19,16 @@ public class PayPage extends BasePage{
 	@FindBy(xpath="//*[@id='arrow-design']")
 	private WebElement backArrowIconFromPayPage;
 	
+	@FindBy(xpath="//*[@id='alt-loader']/div/div")
+	private WebElement loader;
+	
+	
+	 
+	
+	
 	public void clickBackFromPayPage() throws InterruptedException
 	{
-		Thread.sleep(5000);
-		waitTillElementIsClickable(backArrowIconFromPayPage);
+		loaderHandling(loader,backArrowIconFromPayPage);
 		backArrowIconFromPayPage.click();
 	}
 
